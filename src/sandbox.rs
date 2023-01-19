@@ -190,7 +190,7 @@ where
     }
 
     fn subscription(&self) -> Subscription<T::Message> {
-        Subscription::none()
+        T::subscription(self)
     }
 
     fn scale_factor(&self) -> f64 {
